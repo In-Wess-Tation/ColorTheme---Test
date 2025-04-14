@@ -1,0 +1,33 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+
+
+<div class="text-center">
+    <!-- Theme Buttons -->
+    <div class="mt-4">
+        <button onclick="setTheme('lightMode')">Light Mode</button>
+        <button onclick="setTheme('darkMode')">Dark Mode</button>
+        <button onclick="setTheme('blueMode')">Blue Mode</button>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function setTheme(themeName) {
+            const body = document.getElementById('themeBody');
+            body.className = themeName;
+            localStorage.setItem('selectedTheme', themeName);
+        }
+
+        window.onload = function () {
+            const savedTheme = localStorage.getItem('selectedTheme');
+            if (savedTheme) {
+                document.getElementById('themeBody').className = savedTheme;
+            }
+        };
+    </script>
+}
