@@ -10,22 +10,18 @@
 </head>
 <body class="@ViewData["BodyClass"]" id="themeBody">
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">ColorTheme___Test</a>
+                <p class="h3 pe-2">
+                    <a asp-area="" asp-page="/Index">ColorTheme___Test</a>
+                </p>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse d-sm-inline-flex justify-content-between collapse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                        </li>
-                    </ul>
+                <div class="navbar-collapse collapse">
+                    <a class="ps-2" asp-area="" asp-page="/Index">Home</a>
+                    <a class="ps-2" asp-area="" asp-page="/Privacy">Privacy</a>
                 </div>
             </div>
         </nav>
@@ -36,10 +32,9 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - ColorTheme___Test - <a asp-area="" asp-page="/Privacy">Privacy</a>
-        </div>
+    <footer class="border-top footer">
+        <h1>Helloooo</h1>
+        <p>blablabla</p>
     </footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

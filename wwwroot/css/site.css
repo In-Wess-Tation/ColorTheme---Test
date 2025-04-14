@@ -28,54 +28,77 @@ body {
 
 
 :root {
-    --base-color: #fff;
-    --base-variant: #eee;
-    --text-color: #000;
-    --secondary-text: #333;
-    --primary-color: #666;
-    --accent-color: #0071ff;
+    --header-color: #ffee95;
+    --base-color: #f1f1f1;
+    --footer-color: #42424a;
+    --text-color: #313232;
+    --primary-color: #e2cd5f;
+    --secondary-text: #212021;
+    --button-color-: #f1f1f1;
+    --accent-color: #4a4a4a;
+    --footer-text-: #f1f1f1;
+    --header-text-: #313232;
 }
 
 /* Light Theme */
-body.lightMode {
-    --base-color: #ffffff;
-    --base-variant: #f0f0f0;
-    --text-color: #000000;
-    --secondary-text: #666666;
-    --primary-color: #cccccc;
-    --accent-color: #0071ff;
+body.zealandMode {
+    --header-color: #ffee95;
+    --base-color: #f1f1f1;
+    --footer-color: #42424a;
+    --text-color: #313232;
+    --primary-color: #e2cd5f;
+    --secondary-text: #212021;
+    --button-color-: #f1f1f1;
+    --accent-color: #4a4a4a;
+    --footer-text-: #f1f1f1;
+    --header-text-: #313232;
 }
 
 /* Dark Theme */
 body.darkMode {
-    --base-color: #070b1d;
-    --base-variant: #101425;
-    --text-color: #ffffff;
-    --secondary-text: #a4a5b8;
-    --primary-color: #3a435d;
-    --accent-color: #0071ff;
+    --header-color: #c9bc76;
+    --base-color: #212021;
+    --footer-color: #0c0c0c;
+    --text-color: #8c8c8c;
+    --primary-color: #ffee95;
+    --secondary-text: #e6e6e6;
+    --button-color-: #212021;
+    --accent-color: #adadad;
+    --footer-text-: #8c8c8c;
+    --header-text-: #0c0c0c;
 }
 
 /* Blue Theme */
-body.blueMode {
-    --header-color: #0071ff;
-    --base-color: #001f3f;
-    --footer-color: #333;
-    --text-color: #ffffff;
-    --primary-color: #0074D9;
-    --secondary-text: #c0c0c0;
-    --button-color-: #39CCCC; 
-    --accent-color: #258cfb;
-    --link-text-: #39CCCC;
+body.pastelMode {
+    --header-color: #dbafc0;
+    --base-color: #ead8d2;
+    --footer-color: #d395ed;
+    --text-color: #8ac3de;
+    --primary-color: #beb8dc;
+    --secondary-text: #5faed4;
+    --button-color-: #de98b3;
+    --accent-color: #baf4ba;
+    --footer-text-: #baf4ba;
+    --header-text-: #baf4ba;
 }
 
 
 header{
     background-color: var(--header-color);
 }
+header p, header h1, header a {
+    color: var(--header-text-);
+    text-decoration: none; 
+}
+header a:hover {
+    color: var(--footer-text-);
+}
 
 footer {
     background-color: var(--footer-color);
+}
+footer p, footer h1 {
+    color: var(--footer-text-);
 }
 body {
     background-color: var(--base-color);
@@ -106,8 +129,10 @@ button {
 
 button:hover {
     background-color: var(--accent-color);
+    color: var(--footer-text-);
 }
 
+
 a {
-    color: var(--link-text-);
+    color: var(--accent-color);
 }
