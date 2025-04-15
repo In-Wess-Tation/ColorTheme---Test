@@ -17,15 +17,11 @@ html {
   min-height: 100%;
 }
 
-body {
-  margin-bottom: 60px;
-}
 
 
 
 
-
-
+/* Index page */
 
 :root {
     --header-color: #ffee95;
@@ -41,7 +37,7 @@ body {
 }
 
 /* Light Theme */
-body.zealandMode {
+html.zealandMode {
     --header-color: #ffee95;
     --base-color: #f1f1f1;
     --footer-color: #42424a;
@@ -55,7 +51,7 @@ body.zealandMode {
 }
 
 /* Dark Theme */
-body.darkMode {
+html.darkMode {
     --header-color: #c9bc76;
     --base-color: #212021;
     --footer-color: #0c0c0c;
@@ -69,7 +65,7 @@ body.darkMode {
 }
 
 /* Blue Theme */
-body.pastelMode {
+html.pastelMode {
     --header-color: #dbafc0;
     --base-color: #ead8d2;
     --footer-color: #d395ed;
@@ -94,14 +90,21 @@ header a:hover {
     color: var(--footer-text-);
 }
 
+main {
+    height: 100vh;
+}
+
 footer {
     background-color: var(--footer-color);
+    padding: 3rem;
 }
 footer p, footer h1 {
     color: var(--footer-text-);
 }
+
 body {
     background-color: var(--base-color);
+
 }
 
 p {
@@ -126,13 +129,91 @@ button {
     color: var(--text-color);
     transition: background-color 0.3s ease;
 }
-
 button:hover {
     background-color: var(--accent-color);
     color: var(--footer-text-);
 }
 
+button a {
+    color: var(--secondary-text);
+    text-decoration: none;
+}
+button a:hover {
+    color: var(--secondary-text);
+}
 
 a {
     color: var(--accent-color);
 }
+
+
+
+
+/* Reserve page */
+
+.wrapper {
+    background-color: var(--footer-color);
+    opacity: 0.5;
+    border-width: 3px;
+    border-color: var(--text-color);
+    border-radius: 3rem;
+    border-style: dashed;
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.boxes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+.box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 5rem; 
+}
+.box label {
+    font-size: x-large;
+}
+
+.selectBox {
+    color: var(--text-color);
+}
+
+select {
+    background-color: var(--footer-color);
+    color: var(--text-color);
+    width: 10rem;
+    height: 3rem;
+    font-weight: 500;
+    font-size: larger; 
+    border-width: 2px; 
+    border-radius: 0.3rem; 
+}
+
+option {
+    background-color: var(--button-color-);
+    color: var(--text-color); 
+}
+
+.booked { 
+    color: red;
+}
+
+.submitBtn {
+margin-inline: 25rem; 
+
+}
+
+
+
+
+
+
+/* Reservations page */

@@ -23,16 +23,13 @@
 @section Scripts {
     <script>
         function setTheme(themeName) {
-            const body = document.getElementById('themeBody');
-            body.className = themeName;
+            document.documentElement.className = themeName; // Apply to <html>
             localStorage.setItem('selectedTheme', themeName);
         }
 
         window.onload = function () {
-            const savedTheme = localStorage.getItem('selectedTheme');
-            if (savedTheme) {
-                document.getElementById('themeBody').className = savedTheme;
-            }
+            const savedTheme = localStorage.getItem('selectedTheme') || 'lightMode';
+            document.documentElement.className = savedTheme;
         };
     </script>
 }

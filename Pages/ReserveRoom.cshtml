@@ -1,0 +1,97 @@
+﻿@page
+@model ColorTheme___Test.Pages.ReserveRoomModel
+@{
+}
+
+<h1 class="p-3">Resever din Booking: </h1>
+
+
+<div class="wrapper">
+    <section class="boxes">
+
+        <article class="box">
+
+            <div class="selectBox">
+                <label for="day">Dag</label>
+                <select id="day" name="day">
+                    <option value="mandag">Mandag</option>
+                    <option value="tirsdag">Tirsdag</option>
+                    <option value="onsdag">Onsdag</option>
+                    <option value="torsdag">Torsdag</option>
+                    <option value="fredag">Fredag</option>
+                </select>
+            </div>
+
+
+            <div class="selectBox">
+                <label for="time">Tidsrum</label>
+                <select id="time" name="time">
+                    <option class="booked" value="option1">08:00-10:00</option>
+                    <option value="option2">10:00-12:00</option>
+                    <option value="option3">12:00-14:00</option>
+                </select>
+            </div>
+
+        </article>
+
+
+    
+        <article class="box">
+
+            <div class="selectBox">
+                <label for="department">Zealand Afdeling</label>
+                <select id="department" name="department">
+                    <option value="roskilde" >Roskilde</option>
+                    <option value="køge" >Køge</option>
+                    <option value="næstved" >Næstved</option>
+                    <option value="nykøbing" >Nykøbing</option>
+                    <option value="slagelse" >Slagelse</option>
+                    <option value="holbæk" >Holbæk</option>
+                </select>
+             </div>
+
+
+            <div class="selectBox">
+                <label for="roomID">Lokale</label>
+                <select id="roomID" name="roomID">
+                    <option value="D3.11">D3.11</option>
+                    <option value="D3.09">D3.09</option>
+                    <option class="booked" value="D3.05">D3.05</option>
+                    <option value="D2.12">D2.12</option>
+                    <option value="D2.04">D2.04</option>
+                    <option class="booked" value="D2.02">D2.02</option>
+                </select>
+            </div>
+
+        </article>
+
+
+
+        @*     
+        <label for=""></label>
+        <select id="" name="">
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+        </select> 
+        *@
+
+    </section>
+
+@*     <button type="submit" onclick="location.href='@Url.Page("/Resevations")'">Submit</button>
+ *@
+    <button class="submitBtn">
+        <a asp-area="" asp-page="/Resevations">Submit</a>
+    </button>
+
+
+</div>
+
+
+
+
+
+

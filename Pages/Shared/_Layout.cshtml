@@ -4,6 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - ColorTheme___Test</title>
+
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('selectedTheme') || 'lightMode';
+            document.documentElement.className = savedTheme;
+        })();
+    </script>
+
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ColorTheme___Test.styles.css" asp-append-version="true" />
@@ -21,6 +29,9 @@
                 </button>
                 <div class="navbar-collapse collapse">
                     <a class="ps-2" asp-area="" asp-page="/Index">Home</a>
+                    <a class="ps-2" asp-area="" asp-page="/ReserveRoom">Book Lokale</a>
+                    <a class="ps-2" asp-area="" asp-page="/Resevations">Dine Bookings</a>
+
                     <a class="ps-2" asp-area="" asp-page="/Privacy">Privacy</a>
                 </div>
             </div>
@@ -40,6 +51,14 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script>
+        window.onload = function () {
+            const savedTheme = localStorage.getItem('selectedTheme') || 'lightMode';
+            document.body.className = savedTheme;
+        };
+    </script>
+
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>
